@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Contact Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: url(images/aaa.jpg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background: linear-gradient(to right, #24357E, #826D93);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .form-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            opacity: 0.9;
+        }
+        
+        .form-body {
+            padding: 30px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .form-group {
+            flex: 1 0 300px;
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6a11cb;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+            outline: none;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-footer {
+            padding: 20px 30px 30px;
+            text-align: center;
+        }
+        
+        .btn {
+            background: linear-gradient(to right, #24357E, #826D93);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .terms {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .terms a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        /*Aside Styling*/
+        aside{
+            background: rgba(255,255 , 255, 0.95);
+            width:30%;
+            height: 1130px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            color: #333;
+            backdrop-filter: blur(6px);
+            margin: 100px;
+
+        }
+        aside h2{
+            color: #4cO663;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        aside ul{
+            list-style: none;
+            line-height: 1.8;
+        }
+        aside ul li{
+            margin-bottom: 10px;
+        }
+        aside ul li i{
+            color: #6a11cb;
+            margin-right: 8px;
+
+        }
+        aside .tip{
+            background: #f4f1fb;
+            border-left: 4px solid #6a11cb;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #444;
+        }
+        @media (max-width: 900px) {
+            body{
+                flex-direction: column;
+                align-items: center;
+            }
+            aside{
+                width: 100%;
+                max-width: 600px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1><i class="fas fa-user-plus"></i> Create Your Account</h1>
+            <p>Join our community and get access to exclusive features</p>
+        </div>
+        
+        <form class="form-body" method="post" action="">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="firstName" placeholder="Enter your first name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="lastName" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" maxlength="11">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Create a password" required maxlength="32">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required maxlength="32">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <div class="input-group">
+                        <i class="fas fa-globe"></i>
+                        <select id="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="usa">United States</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="australia">Australia</option>
+                            <option value="germany">Germany</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Choose Gender</label>
+                    <div class="input-group"></div>
+                    <input type="Radiobutton" name="sex" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="Radiobutton" name="sex" id="female" value="Female">
+                    <label for="female">Female</label>
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth</label>
+                    <div class="input-group">
+                        <i class="fas fa-calendar"></i>
+                        <input type="date" id="birthdate" required>
+                    </div>
+                </div>
+            </div>
+            <input type="file" name="passport" id="upload-passport" accept="image/*">
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <div class="input-group">
+                    <i class="fas fa-pen"></i>
+                    <textarea id="bio" placeholder="Tell us a little about yourself"></textarea>
+                </div>
+            </div>
+            <div class="form-footer">
+            <button type="submit" class="btn">Create Account</button>
+            <p class="terms">By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+        </form>
+    </div>
+        <!-- ASIDE SECTION -->
+        <aside>
+            <h2><i class="fas fa-lightbulb"></i>Registration tips</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i>Use your real name for quick verification</li>
+                <li><i class="fas fa-lock"></i>Choose a strong pasword with symbols & numbers.</li>
+                <li><i class="fas fa-camera"></i>Upload a clear photo for your profile</li>
+                <li><i class="fas fa-envelope"></i>Check your email account for activation</li> 
+        </ul>
+        <div class="tip" style="margin-top: 10px;">
+            <strong>Need Help?</strong><br>
+            <i class="fas fa-envelope"></i>
+            support@example.com<br>
+            <i class="fas fa-phone"></i>+2348053440121
+        </div>
+            <div class="tip">
+                <strong>Pro Tip</strong>
+            Save your login details in a secure password manager to avoid losing access
+        </div>
+        <img src="images/jm.jpg" width="450px" height="500px">
+         <video src="images/jm.mp4" width="275px"></video>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title of page</title>
+	<p>This is a paaragraph</p>
+	<link rel="stylesheet" type="text/css" href="table20">
+	<h1>this is heading</h1>
+	<img src="images/kkk.jpg">
+</head>
+<p id="boni">today</p>
+ <button type="button" onclick="urfunction()">click here</button>
+
+<body>
+<!-- 	<h2>what can javascript do</h2>
+	<p id="demo1">Javascript can change HTML content</p>
+	<button type="button" onclick='document.getElementById("demo1").innerHTML="Hello Learners"'>Click here</button> -->
+
+	
+<!-- <h1>Javascript Syntax</h1>
+<h3>Te let and const keywords create variables</h3>
+<p id="boni"></p>
+
+ <script>
+ 	let x = 15;
+ 	const aname = "Boniface";
+ 	document.getElementById("boni").innerHTML= aname + "is" + x + "years old";
+ </script> -->
+<!--  <h1>Javascript Variables</h1>
+ <p>In this example, x, y, and z are variables</p>
+ <p id="practice"></p>
+
+ <script>
+ 	let x = 5;
+ 	let y = 6;
+ 	let z = x + y;
+
+ 	document.getElementById("practice").innerHTML = "The value of z is " + z;
+ </script> -->
+ <h2> Javascript can change HTML attribute values</h2>
+ <p>in this case javascript can change the source attribute of an image</p>
+ <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on light</button>
+ <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
+  <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn of light</button>
+  <p id="btag">A paragraph</p>
+  <button type="button" onclick="myfunction()">Try it</button>
+<script type="text/javascript">
+	function myfunction() {document.getElementById("btag").innerHTML="Change Paragraph";
+		// body...
+	}
+</script>
+<script type="text/javascript">
+	function urfunction() {document.getElementById("boni").innerHTML=new Date().toLocaleString();
+		// body...
+	}
+
+</script>
+
+<div align="right">
+	<button onclick="printpage()">Print page</button>
+</div>
+
+<script type="text/javascript">
+	function printpage() {
+		window.print()// body...
+	}
+
+</script>
+
+
+
+
+
+
+
+
+
+	</body>
