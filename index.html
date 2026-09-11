@@ -29,7 +29,7 @@
   }
 </style>
 </head>
-<body background="images/aaa.jpg">
+<body bgcolor="black">
   <!-- Start WOWSlider.com BODY section -->
 <div id="wowslider-container1">
 <div class="ws_images"><ul>
@@ -63,28 +63,28 @@
   <div class="product">
   <span>JBL Headset</span>
   <img src="images/jblheadset.jpg" height="90px" width="90px">
-  <span>&#8358 4,000</span>
+  <span>₦4,000</span>
 <button class="btn-buy">BUY NOW</button> 
 
 </div>
 <div class="product">
   <span>Smart Watch</span>
   <img src="images/smart watch.jpg" height="90px" width="90px">
-  <p>&#8358 2,500</p>
+  <p>₦2,500</p>
   <button class="btn-buy">BUY NOW</button> 
 </div>
 
 <div class="product">
   <span>iphones 16 Pro</span>
   <img src="images/iphones.jpg" height="90px" width="90px">
-  <p>&#8358 500,000</p>
+  <p>₦500,000</p>
   <button class="btn-buy">BUY NOW</button> 
 </div>
 
 <div class="product">
   <span>Laptops</span>
   <img src="images/laptops.jpg" height="90px" width="90px">
-  <p>&#8358 300,000</p>
+  <p>₦300,000</p>
   <button class="btn-buy">BUY NOW</button>
  
 <!--   <select>
@@ -113,7 +113,7 @@
   <div class="product">
   <span>Printer</span>
   <img src="images/Printer.jpg" height="90px" width="90px">
-  <p>&#8358; 150,000</p>
+  <p>₦150,000</p>
   <button class="btn-buy" onclick="addToCart('Printer',)">BUY NOW</button> 
   </div>
   </div>
@@ -126,31 +126,31 @@
   <div class="product">
   <span>Gaming Consoles</span>
   <img src="images/Gamingconsoles.jpg" height="90px" width="90px">
-  <p>&#8358; 800,000</p>
+  <p>₦800,000</p>
   <button class="btn-buy">BUY NOW</button> 
   </div>
   <div class="product">
   <span>Earbuds</span>
   <img src="images/earbuds.jpg" height="90px" width="90px">
-  <p>&#8358; 65,000</p>
+  <p>₦65,000</p>
   <button class="btn-buy">BUY NOW</button> 
   </div>
   <div class="product">
   <span>VR Headsets</span>
   <img src="images/vrheadsets.jpg" height="90px" width="90px">
-  <p>&#8358; 800,000</p>
+  <p>₦800,000</p>
   <button class="btn-buy">BUY NOW</button> 
   </div>
   <div class="product">
   <span>Projector</span>
   <img src="images/projector.jpg" height="90px" width="90px">
-  <p>&#8358 750,000</p>
+  <p>₦750,000</p>
   <button class="btn-buy">BUY NOW</button> 
   </div>
   <div class="product">
   <span>Powerbank</span>
   <img src="images/powerbank.jpg" height="90px" width="90px">
-  <p>&#8358 25,000</p>
+  <p>₦25,000</p>
   <button class="btn-buy">BUY NOW</button> 
   </div>
 </div>
@@ -191,7 +191,7 @@ function updateCart() {
 
     cart.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = `${item.name} x ${item.quantity} = &#8358;${item.price * item.quantity}`;
+        li.textContent = `${item.name} x ${item.quantity} = ₦${item.price * item.quantity}`;
         cartElement.appendChild(li);
 
         total += item.price * item.quantity;
